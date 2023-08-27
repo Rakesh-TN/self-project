@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" href = "https://img.icons8.com/3d-fluency/94/smiling-face-with-hearts-icon.png" type = "image/x-icon"> 
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <section class="signUpform">
+        <div class="formTitle">
+            <h1>Sign UP</h1>
+        </div>
+        <div class="formCollect">
+            <form action="">
+                <div>
+                    <label for="userID">Enter the User Name : </label>
+                    <input type="text" id="userID"/>
+                </div>
+                <br>
+                <div>
+                    <label for="userName">Enter the full Name : </label>
+                    <input type="text" id="userName"/>
+                </div>
+                <br>
+                <div>
+                    <label for="userGender">Gender : </label>
+                    <input type="radio" id="userGender" value="Male"/> Male
+                    <input type="radio" id="userGender" value="Female"/> Female
+                    <input type="radio" id="userGender" value="Others"/> Others
+
+                </div>
+                <br>
+                <div>
+                    <label for="userNumber">Enter the Mobile Number : </label>
+                    <!-- Country Code want to link with JS  -->
+                    <select name="countryCode" id="countryCode">
+                        <option value="not selected" >-select-</option>
+                        <option value="IN +91">IN +91</option>
+                        <option value="US +1">US +1</option>
+                    </select>
+                    <input type="number" id="userNumber"/>
+                </div>
+                <br>
+                <div>
+                    <label for="userMail">Enter the Mail ID : </label>
+                    <input type="text" id="userMail"/>
+                </div>
+            </form>
+            <br>
+            <button type="button" class="saveButton" onclick="saveInfo()"> Save </button><button type="button" class="printButton" onclick="printInfo()">Print</button>
+        </div>
+    </section>
+</body>                             
+</html> 

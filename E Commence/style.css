@@ -1,0 +1,34 @@
+body{
+    background-color: #fbba72;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.signUpform{
+    background-color: white;
+    padding: 10px;
+    border-radius: 30px;
+    margin: 10%;
+    justify-content: center;
+}
+.formTitle{
+    text-align: center;
+}
+.formCollect{
+    text-align: center;
+}
+.saveButton{
+    background-color: royalblue;
+    color: white;
+    border-color: royalblue;
+    height: 30px;
+    width: 60px;
+    border-radius: 30px;
+}
+.printButton{
+    background-color:indianred;
+    color: white;
+    border-color: indianred;
+    height: 30px;
+    width: 60px;
+    border-radius: 30px;
+    margin-left: 10px;
+}
