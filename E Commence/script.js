@@ -41,6 +41,7 @@ function printInfo(){
     </div>
     <div class="formCollect">
             <div>
+                <p>Your User Name : ${userId}</p>
             </div>
             <br>
             <div>
