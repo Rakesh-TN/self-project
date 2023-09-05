@@ -31,7 +31,7 @@ function printInfo(){
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel = "icon" href = "https://img.icons8.com/3d-fluency/94/smiling-face-with-hearts-icon.png" type = "image/x-icon"> 
+        <link rel = "icon" href = "./img/message.png" type = "image/x-icon"> 
         <title>Profile Page</title>
         <link rel="stylesheet" href="./style.css">
 
