@@ -4,24 +4,29 @@ function saveInfo(){
     let comma = document.querySelector("#userNumber")
     let delta = document.querySelector("#userMail")
     let mark = document.querySelector("#userGender")
+    let juna = document.querySelector("#countryCode")
 
     let userId = alpha.value 
     let userName = beta.value
     let userNumber = comma.value
     let userMail = delta.value
     let userGender = mark.value
+    let countryCode = juna.value
 
     let userinfo = []
-    let info = {userId,userName,userNumber,userMail,userGender}
+    let info = {userId,userName,userNumber,userMail,userGender, countryCode }
     userinfo.push(info)
-    let stringify = localStorage.setItem("Personal-Detail", JSON.stringify(userinfo))
-    console.log(stringify)
+    console.log(userinfo)
+    let fd = localStorage.setItem("Personal-Detail", JSON.stringify(userinfo))
+    console.log(fd)
 }
 
 function printInfo(){
-    let info2 = JSON.parse(localStorage.getItem("Personal-Detail"))
-    let printInfo = window.open("", "_blank");
-    let {userId,userName,userNumber,userMail,userGender} = info2
+    let info2 = localStorage.getItem("Personal-Detail")
+    let info3=JSON.parse(info2)
+    let printInfo = window.open("_blank");
+    let {userId,userName,userNumber,userMail,userGender,countryCode}=info3[0]
+    console.log(info2)
 
     printInfo.document.write(`
     <!DOCTYPE html>
@@ -49,17 +54,17 @@ function printInfo(){
             </div>
             <br>
             <div>
-                <p>Your Gender : ${userGender}</p>
+                <p>Your Gender : ${userGender}</p>   
             </div>
             <br>
             <div>
-                <p>Your Mobile Number : ${userNumber}</p>
+                <p>Your Mobile Number : ${countryCode}  ${userNumber}</p>
             </div>
             <br>
             <div>
                 <p>Your Mail ID : ${userMail}</p>
             </div>
-        </form>
+    </div>        
     </body>
     </html>`)
 }
