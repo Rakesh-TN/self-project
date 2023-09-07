@@ -13,6 +13,28 @@ function saveInfo(){
     let userGender = mark.value
     let countryCode = juna.value
 
+    let userIdEX = /^[a-z]{2,16}[\W]{1}[0-9]{2,16}$/
+    if (!userIdEX.test(userId)){
+        alert("Please enter a valid User ID like 'abc@1234'.");
+        return;
+    }
+    let userNameEX = /^[A-Z]{1}[\w]{1,15}/
+    if (!userNameEX.test(userName)){
+        alert("Please enter a valid User Name like 'Johnan'.");
+        return;
+    }
+    let userNumberEX =/[6-9]{1}[0-9]{9}$/
+    if(!userNumberEX.test(userNumber)){
+        alert("Please enter a valid Your Number with 10 Digit.");
+        return;
+    }
+    let userMailEX = /[\w]{2,32}[\W]/
+    if(!userMailEX.test(userMail)){
+        alert("Please enter a valid User Mail.");
+        return;
+    }
+    
+
     let userinfo = []
     let info = {userId,userName,userNumber,userMail,userGender, countryCode }
     userinfo.push(info)
@@ -61,14 +83,8 @@ function printInfo(){
             <div>
                 <p>Your Mail ID : ${userMail}</p>
             </div>
-            <div>
-                <button type="button" class="nextButton" onclick="openPasskey()"> Next </button>
-            </div>
     </div>        
     </body>
     </html>`)
 }
 
-function openPasskey(){
-    
-}
