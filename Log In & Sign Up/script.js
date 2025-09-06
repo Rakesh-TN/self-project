@@ -48,43 +48,32 @@ function printInfo(){
     let {userId,userName,userNumber,userMail,userGender,countryCode} = info2[0]
 
     printInfo.document.write(`
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel = "icon" href = "./img/message.png" type = "image/x-icon"> 
-        <title>Profile Page</title>
-        <link rel="stylesheet" href="./style.css">
-
-    </head>
-    <body>
-    <section class="signUpform">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/img/message.png" type="image/x-icon"> 
+  <title>Profile Page</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <section class="signUpform">
     <div class="formTitle">
-        <h1>Profile</h1>
+      <h1>Profile</h1>
     </div>
     <div class="formCollect">
-            <div>
-                <p>Your User Name : ${userId}</p>
-            </div>
-            <br>
-            <div>
-                <p>Your Name : ${userName}</p>
-            </div>
-            <br>
-            <div>
-                <p>Your Gender : ${userGender}</p>   
-            </div>
-            <br>
-            <div>
-                <p>Your Mobile Number : ${countryCode},  ${userNumber}</p>
-            </div>
-            <br>
-            <div>
-                <p>Your Mail ID : ${userMail}</p>
-            </div>
+      <p>Your User Name: ${userId || ""}</p>
+      <p>Your Name: ${userName || ""}</p>
+      <p>Your Gender: ${userGender || ""}</p>
+      <p>Your Mobile Number: ${countryCode || ""} ${userNumber || ""}</p>
+      <p>Your Mail ID: ${userMail || ""}</p>
     </div>        
-    </body>
-    </html>`)
+  </section>
+</body>
+</html>
+`);
 }
+printInfo.document.close();
+
 
